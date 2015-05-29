@@ -1,0 +1,354 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/homepage_header" >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/neulife_logo" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_desc_main1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/category_btn" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="26dp"
+                android:text="Profile"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/ivPlusDesc"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/textView1"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/svdescription"
+            android:layout_width="match_parent"
+            android:layout_height="240dp" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="First Name"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etFirstName"
+                    android:hint="Last Name"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
+
+                <EditText
+                    android:id="@+id/etUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etLastName"
+                    android:hint="Username"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etUserName"
+                    android:hint="Phone"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
+
+                <RelativeLayout
+                    android:id="@+id/updateAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/etPhone"
+                    android:layout_marginTop="5dp"
+                    android:background="#9a0a0a"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tvUpdateAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="Update"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_desc_main2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_desc_main1"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/category_btn" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="26dp"
+                android:text="Delivery Address"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/ivPlusSuppliment"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/svsuppliment"
+            android:layout_width="wrap_content"
+            android:layout_height="260dp"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/etAddress1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address Line 1"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
+
+                <EditText
+                    android:id="@+id/etAddress2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etAddress1"
+                    android:hint="Address Line 2"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
+
+                <EditText
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etAddress2"
+                    android:hint="City"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
+
+                <EditText
+                    android:id="@+id/etCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etCity"
+                    android:hint="Country"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
+
+                <EditText
+                    android:id="@+id/etPhoneAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etCountry"
+                    android:hint="Phone"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
+
+                <RelativeLayout
+                    android:id="@+id/updateAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/etPhoneAddress"
+                    android:layout_marginTop="5dp"
+                    android:background="#9a0a0a"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tvUpdateAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="Update"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_desc_main3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_desc_main2"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/category_btn" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="26dp"
+                android:text="Change Password"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/ivPlusIngrediants"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/textView3"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/svingrediants"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Password"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
+
+                <EditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etPassword"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
+
+                <RelativeLayout
+                    android:id="@+id/updatePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/etConfirmPassword"
+                    android:layout_marginTop="5dp"
+                    android:background="#9a0a0a"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tvUpdatePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="Change Password"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Order management -->
+
+    <LinearLayout
+        android:id="@+id/ll_desc_main4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_desc_main3"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/category_btn" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="26dp"
+                android:text="Order Tracking"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footer" />
+
+</RelativeLayout>

@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/homepage_header" >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/neulife_logo" />
+
+        <ImageView
+            android:id="@+id/ivNotifications"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/header_bell" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="3dp" >
+
+        <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <EditText
+            android:id="@+id/searchTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:hint="Search for a product or brand"
+            android:lines="1"
+            android:maxLength="35"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/searchHeader"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/search_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchLayout" >
+
+        <RelativeLayout
+            android:id="@+id/selectionBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="72dp"
+            android:layout_marginRight="72dp" >
+
+            <!-- Chain imageview -->
+
+            <ImageView
+                android:id="@+id/longChainLeft"
+                android:layout_width="8dp"
+                android:layout_height="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/small_chain" />
+
+            <ImageView
+                android:id="@+id/longChainRight"
+                android:layout_width="8dp"
+                android:layout_height="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="106dp"
+                android:background="@drawable/small_chain" />
+
+            <ImageView
+                android:id="@+id/longChain1Right"
+                android:layout_width="8dp"
+                android:layout_height="125dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/long_chain" />
+
+            <ImageView
+                android:id="@+id/longChain2Right"
+                android:layout_width="8dp"
+                android:layout_height="125dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/offersBtn"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/long_chain" />
+
+            <ImageView
+                android:id="@+id/longChain1Left"
+                android:layout_width="8dp"
+                android:layout_height="125dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/newArrivalBtn"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/long_chain" />
+
+            <ImageView
+                android:id="@+id/longChain11Left"
+                android:layout_width="5dp"
+                android:layout_height="105dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/newArrivalBtn"
+                android:layout_marginLeft="106dp"
+                android:background="@drawable/long_chain" />
+
+            <ImageView
+                android:id="@+id/longChain2Left"
+                android:layout_width="8dp"
+                android:layout_height="125dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/bestsellerBtn"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/long_chain" />
+
+            <ImageView
+                android:id="@+id/longChain22Left"
+                android:layout_width="8dp"
+                android:layout_height="125dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/bestsellerBtn"
+                android:layout_marginLeft="106dp"
+                android:background="@drawable/long_chain" />
+
+            <ImageView
+                android:id="@+id/newArrivalBtn"
+                android:layout_width="115dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/new_arrivals_btn" />
+
+            <ImageView
+                android:id="@+id/offersBtn"
+                android:layout_width="115dp"
+                android:layout_height="53dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/newArrivalBtn"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/offers_btn" />
+
+            <ImageView
+                android:id="@+id/bestsellerBtn"
+                android:layout_width="115dp"
+                android:layout_height="53dp"
+                android:layout_below="@+id/offersBtn"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/best_sellers_btn" />
+
+            <ImageView
+                android:id="@+id/topRatedBtn"
+                android:layout_width="115dp"
+                android:layout_height="53dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/bestsellerBtn"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/top_rated_btn" />
+
+            <ImageView
+                android:id="@+id/recommendBtn"
+                android:layout_width="115dp"
+                android:layout_height="53dp"
+                android:layout_below="@+id/topRatedBtn"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/recommend_btn" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/shopByCategoryBtn"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/footerMenu"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/shop_category_btn" />
+
+    <include
+        android:id="@+id/footerMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footer" />
+
+</RelativeLayout>

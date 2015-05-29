@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.retailinsights.neulife"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <!-- Google Cloud messaging permission for manifest -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <permission
+        android:name="app.retailinsights.neulife.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="app.retailinsights.neulife.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="app.retailinsights.neulife.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LandingScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Categories"
+            android:label="@string/title_activity_categories"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".account.LoginMain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.WishList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_wish_list"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".account.AccountManagement"
+            android:label="@string/title_activity_account_management"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".productlisting.ProductListing"
+            android:label="@string/title_activity_product_listing"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".productlisting.Search"
+            android:label="@string/title_activity_product_listing"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".productlisting.NewArrival"
+            android:label="@string/title_activity_new_arrival"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".productlisting.Offers"
+            android:label="@string/title_activity_offers"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".productlisting.BestSellers"
+            android:label="@string/title_activity_best_sellers"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".productlisting.TopRated"
+            android:label="@string/title_activity_top_rated"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".productlisting.Recommended"
+            android:label="@string/title_activity_recommended"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Cart"
+            android:label="@string/title_activity_cart"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ProductDetails"
+            android:label="@string/title_activity_product_details"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ProductAdvancedDetails"
+            android:label="@string/title_activity_product_advanced_details"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CheckOut"
+            android:label="@string/title_activity_check_out"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".account.OrderTracking"
+            android:label="@string/title_activity_check_out"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".account.Notifications"
+            android:label="@string/title_activity_notifications"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".account.ProfileEdit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.ManageAccount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.HelpsAndFAqs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.ManageAccountProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.DeliveryAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.ChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.NotificationSetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.DeliveryAddressEdit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".database.AndroidDatabaseManager"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".utils.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.javapapers.android" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".utils.IncomingSms" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".utils.GCMNotificationIntentService" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBGul2-IldXEPFV-yGfJ9GRnszfqiob6do" />
+
+        <activity
+            android:name="app.retailinsights.neulife.account.ViewOrder"
+            android:label="@string/title_activity_view_order"
+			android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

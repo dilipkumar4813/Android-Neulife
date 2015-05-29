@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/homepage_header" >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/neulife_logo" />
+
+        <ImageView
+            android:id="@+id/ivNotification"
+            android:layout_width="25dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/header_bell" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/notificationHeader"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/header"
+        android:background="@drawable/cart_title" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Notifications"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvNotifications"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notificationHeader"
+        android:layout_margin="7dp"
+        android:gravity="center"
+        android:horizontalSpacing="2dp"
+        android:verticalSpacing="2dp" >
+    </ListView>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footer" />
+
+</RelativeLayout>

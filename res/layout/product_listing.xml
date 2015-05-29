@@ -1,0 +1,367 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/footer_menu" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back_btn_header" />
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Protien Powders"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/productCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHeader"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text="(0)"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/header_bell" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_filter_heading"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/header"
+        android:background="@drawable/cart_title" >
+
+        <RelativeLayout
+            android:id="@+id/rl_filter"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/filter"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/filter_icon" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/filter" >
+
+                    <TextView
+                        android:id="@+id/tvFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="Filter"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvNoneApplied"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvFilter"
+                        android:layout_marginLeft="2dp"
+                        android:text="None applied"
+                        android:textSize="10dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/filter_divider" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_cancel"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="Cancel"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/filter_divider" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/relativeLayout1"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_sort"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/sort"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/sort_icon" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/sort" >
+
+                    <TextView
+                        android:id="@+id/tvSort"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="Sort by"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvSort"
+                        android:layout_marginLeft="2dp"
+                        android:text="Price"
+                        android:textSize="10dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/filter_divider" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_filter1"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/filter1"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/filter_icon" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/filter1" >
+
+                    <TextView
+                        android:id="@+id/tvFilter1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="Filter"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/filter_divider" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/whichView"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <ImageView
+                    android:id="@+id/gridV"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/gridview_icon" />
+
+                <TextView
+                    android:id="@+id/tvGrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/gridV"
+                    android:text="List view"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/whichView1"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tvGrid1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/chkApply"
+                android:text="Apply"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_filter_heading"
+        android:layout_margin="7dp"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:horizontalSpacing="2dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dp"
+        android:visibility="visible"
+        android:layout_above="@+id/idFooter" >
+    </GridView>
+
+    <ListView
+        android:layout_above="@+id/idFooter" 
+        android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_filter_heading"
+        android:layout_margin="7dp"
+        android:gravity="center"
+        android:horizontalSpacing="2dp"
+        android:verticalSpacing="2dp"
+        android:visibility="gone" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_below="@+id/ll_filter_heading"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="5" >
+
+        <ListView
+            android:id="@+id/lvSubCategory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#ffffff" />
+
+        <ListView
+            android:id="@+id/android:list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="#cecece"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/idFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footer" />
+
+</RelativeLayout>

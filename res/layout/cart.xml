@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/homepage_header" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back_btn_header" />
+
+        <ImageView
+            android:id="@+id/tvHeader"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/neulife_logo" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/header_bell" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_filter_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="2dp"
+        android:background="#f4f3f3"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/ivAdImage1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/textView1"
+                android:src="@drawable/sym_rupee" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivAdImage1"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/textView1"
+                android:gravity="center_vertical"
+                android:text="Subtotal" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="(0 Item):" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:text="This order contains a gift"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/checkoutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corners_yellow"
+            android:text="Proceed to checkout"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/shpnHeader"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@+id/ll_filter_heading"
+        android:layout_margin="5dp"
+        android:background="@drawable/cart_title" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_alignParentRight="true"
+            android:text="Quantity"
+            android:layout_marginRight="5dp"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:text="Shopping Cart"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:text="items to buy now"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listViewCart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvCartText"
+        android:layout_below="@+id/shpnHeader"
+        android:layout_marginTop="5dp"
+        android:columnWidth="100dp"
+        android:gravity="center"
+         android:descendantFocusability="beforeDescendants"  
+        android:verticalSpacing="2dp" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvCartText"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_above="@+id/tvAddMoreProd"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="4dp"
+        android:background="#cb282d"
+        android:gravity="center"
+        android:text="Classic marbles was removed from Shopping Cart"
+        android:textColor="#fff"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/tvAddMoreProd"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/idFooter"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rounded_corners_yellow"
+        android:gravity="center"
+        android:text="Add more products"
+        android:textSize="13sp" />
+
+    <include
+        android:id="@+id/idFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footer" />
+
+</RelativeLayout>

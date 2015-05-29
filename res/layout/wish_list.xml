@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/homepage_header" >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/neulife_logo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_cart_header"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/header"
+        android:background="@drawable/cart_title" >
+
+        <ImageView
+            android:id="@+id/ivBackbtn"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivBackbtn"
+            android:layout_centerHorizontal="true"
+            android:text="Wishlist"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/ivRefresh"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/ivBackbtn"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/refresh_btn" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_wish_list"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_above="@+id/idFooter"
+        android:layout_below="@+id/id_cart_header"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:descendantFocusability="beforeDescendants"
+        android:verticalSpacing="2dp" />
+
+    <include
+        android:id="@+id/idFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footer" />
+
+</RelativeLayout>

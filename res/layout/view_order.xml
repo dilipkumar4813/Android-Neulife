@@ -1,0 +1,241 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/homepage_header" >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/neulife_logo" />
+
+        <ImageView
+            android:id="@+id/ivNotification"
+            android:layout_width="25dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/header_bell" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_cart_header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/cart_title" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="View Order"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_cart_header"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="1dp"
+        android:background="#dfdfdf"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <!-- Delivery address block -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="2" >
+
+            <TableRow android:layout_width="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Address"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDeliveryAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:text="#129, 4th J Cross\nKasturi Nagar\nBangalore 560043\nKarnataka\nMobile : +91 9739388304" />
+            </TableRow>
+
+            <!-- Shipping address block -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shipping Address"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvShippingAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:text="#129, 4th J Cross\nKasturi Nagar\nBangalore 560043\nKarnataka\nMobile : +91 9739388304" /> />
+            </TableRow>
+
+            <!-- Status Block -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:text="Delivered" />
+            </TableRow>
+
+            <!-- Order ID Block -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order ID"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOrderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:text="32165487" />
+            </TableRow>
+
+            <!-- Order Date Block -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Date"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOrderDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:text="32165487" />
+            </TableRow>
+
+            <!-- Order Delivered Block -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Delivered"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOrderDelivered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:text="pending" />
+            </TableRow>
+
+            <!-- Order Delivered Block -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount Details"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAmountDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:text="Quantity : 1 item\nSavings : Rs 42\nDelivery Charge : Rs32" />
+            </TableRow>
+
+            <!-- Total Block -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Amount"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:text="1325" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footer" />
+
+</RelativeLayout>

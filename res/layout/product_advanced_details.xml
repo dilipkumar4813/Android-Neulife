@@ -1,0 +1,593 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/homepage_header" >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/neulife_logo" />
+
+        <ImageView
+            android:id="@+id/ivNotifications"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/header_bell" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_cart_header"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/header"
+        android:background="@drawable/cart_title" >
+        
+       
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/tvProdName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv_desc_main1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_desc_main1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/category_btn" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="26dp"
+                        android:text="Description"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:id="@+id/ivPlusDesc"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignBottom="@+id/textView1"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp" />
+                </RelativeLayout>
+
+                <ScrollView
+                    android:visibility="gone"
+                    android:id="@+id/svdescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp" >
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#cdcdcd"
+                        android:padding="8dp"
+                        android:text="Static text"
+                        android:visibility="gone" />
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_desc_main2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_desc_main1"
+                android:layout_margin="1dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/category_btn" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="26dp"
+                        android:text="Supplement Facts"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:id="@+id/ivPlusSuppliment"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignBottom="@+id/textView2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp" />
+                </RelativeLayout>
+
+                <ScrollView
+                    android:id="@+id/svsuppliment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tvSuppliment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#cdcdcd"
+                        android:text="" />
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_desc_main3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_desc_main2"
+                android:layout_margin="1dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/category_btn" >
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="26dp"
+                        android:text="Ingredients"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:id="@+id/ivPlusIngrediants"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignBottom="@+id/textView3"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp" />
+                </RelativeLayout>
+
+                <ScrollView
+                    android:id="@+id/svingrediants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tvIngrediants"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#cdcdcd"
+                        android:padding="8dp"
+                        android:text="" />
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_desc_main4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_desc_main3"
+                android:layout_margin="1dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/category_btn" >
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="26dp"
+                        android:text="How To Use"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:id="@+id/ivHowToUse"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignBottom="@+id/textView4"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp" />
+                </RelativeLayout>
+
+                <ScrollView
+                    android:id="@+id/svHowToUse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tvHowToUSe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#cdcdcd"
+                        android:padding="8dp"
+                        android:text="" />
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_desc_main5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_desc_main4"
+                android:layout_margin="1dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/category_btn" >
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="26dp"
+                        android:text="FAQs"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:id="@+id/ivFaq"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignBottom="@+id/textView5"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp" />
+                </RelativeLayout>
+
+                <ScrollView
+                    android:id="@+id/svFaq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tvFaq"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#cdcdcd"
+                        android:padding="8dp"
+                        android:text="" />
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_desc_main6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_desc_main5"
+                android:layout_margin="1dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/category_btn" >
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="26dp"
+                        android:text="Review"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:id="@+id/ivReview"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignBottom="@+id/textView6"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp" />
+                </RelativeLayout>
+
+                <ScrollView
+                    android:id="@+id/svReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tvReview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#cdcdcd"
+                        android:padding="8dp"
+                        android:text="" />
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+     <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/ll_desc_main6"
+        android:background="#555555"
+        android:gravity="left|center"
+        android:padding="5dp"
+        android:text="Related Products"
+        android:textColor="#FFFFFF" />
+
+    <HorizontalScrollView
+        android:id="@+id/hsv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:measureAllChildren="false"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#cdcdcd"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="#cdcdcd"
+                android:src="@drawable/neulife_product" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="#cdcdcd"
+                android:src="@drawable/neulife_product" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="#cdcdcd"
+                android:src="@drawable/neulife_product" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="#cdcdcd"
+                android:src="@drawable/neulife_product" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="#cdcdcd"
+                android:src="@drawable/neulife_product" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="#cdcdcd"
+                android:src="@drawable/neulife_product" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="#cdcdcd"
+                android:src="@drawable/neulife_product" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <!-- Footer Navigation -->
+
+    <RelativeLayout
+        android:id="@+id/footerMenu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/footer_menu"
+        android:gravity="bottom" >
+
+        <RelativeLayout
+            android:id="@+id/homeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp" >
+
+            <ImageButton
+                android:id="@+id/homeImg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/footer_home_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="Home"
+                android:textColor="#ffffff"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/wishlistBtn"
+            android:layout_toRightOf="@+id/homeBtn" >
+
+            <ImageButton
+                android:id="@+id/searchImg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/footer_search_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="Search"
+                android:textColor="#ffffff"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/wishlistBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp" >
+
+            <ImageButton
+                android:id="@+id/wishlistImg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/footer_wishlist" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="Wishlist"
+                android:textColor="#ffffff"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/accountBtn"
+            android:layout_toRightOf="@+id/wishlistBtn" >
+
+            <ImageButton
+                android:id="@+id/cartImg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/footer_cart_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="Cart"
+                android:textColor="#ffffff"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/accountBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp" >
+
+            <ImageButton
+                android:id="@+id/accountImg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/footer_account_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="Account"
+                android:textColor="#ffffff"
+                android:textSize="10dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
